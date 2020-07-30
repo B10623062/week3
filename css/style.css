@@ -300,9 +300,9 @@ body {
 .productList-item {
   display: flex;
   flex-direction: column;
-  width: 48%;
+  /* width: 48%; */
   margin-bottom: 20px;
-  /* margin-right: 2%; */
+  /* margin-right: 20px; */
 }
 
 .product-img {
@@ -397,6 +397,16 @@ body {
 }
 
 /* ----------banner content斷點---------- */
+
+/* ----ipad pro---- */
+@media (max-width: 1024px) {
+  .productList-item {
+    width: 48%;
+  }
+}
+
+/* ----ipad pro---- */
+
 /* ----ipad---- */
 @media (max-width: 768px) {
   .banner {
@@ -425,7 +435,7 @@ body {
   }
 
   .productList-item {
-    width: 46%;
+    /* width: 46%; */
     margin-bottom: 30px;
   }
 
@@ -459,7 +469,8 @@ body {
   }
 
   .productList-item {
-    width: 72%;
+    /* width: 72%; */
+    padding: 5px;
   }
 
   .page {
@@ -467,6 +478,13 @@ body {
     margin-bottom: 30px;
   }
 }
+
+@media (max-width: 414px) {
+  .productList-item {
+    width: 73%;
+  }
+}
+
 /* ----手機---- */
 
 /* ----------banner content斷點---------- */
