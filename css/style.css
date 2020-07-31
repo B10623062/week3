@@ -160,8 +160,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding: 30px 0;
+  /* margin-top: 30px;
+  margin-bottom: 30px; */
+  position: relative;
 }
 
 .hanIcon {
@@ -180,18 +182,40 @@ body {
   white-space: nowrap;
 }
 
-.menu {
-  /* background-color: palegoldenrod; */
-  width: 33%;
+.navbar {
   display: flex;
-  justify-content: space-between;
+  /* width: 60%; */
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
-.menu li a {
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 0;
+}
+
+.menuText-link {
   display: block;
   font-size: 16px;
   line-height: 22px;
+  padding: 10px 30px;
+  transition: 0.3s;
+}
+
+.menuText-link:hover {
+  background-color: #eaf0ed;
+}
+
+.cartIcon {
+  display: block;
+  padding: 10px 0 10px 30px;
+}
+
+.active {
+  max-height: 200px;
 }
 
 /* ----------header斷點---------- */
@@ -218,16 +242,40 @@ body {
     display: block;
   }
 
+  .hanIcon:focus {
+    outline: 0;
+  }
+
   .header h1 a {
     background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logotype-sm-dark.svg);
   }
 
   .menu {
-    width: auto;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    transition: all 0.8s;
+    overflow: hidden;
+    background-color: white;
+    flex-direction: column;
+  }
+
+  .menu li a {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .menu li a:hover {
+    background-color: #eaf0ed;
   }
 
   .menuText {
-    display: none;
+    width: 100%;
+  }
+
+  .cartIcon {
+    padding: 0;
   }
 }
 /* ----平板---- */
